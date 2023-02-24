@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Tour Quest",
+    "description": "A server-side rendered tour booking system leveraging 40 REST APIs to making tour searching and booking seamless.",
+    "image": "tour-quest.jpg",
+    "skills": ["Node.js", "JavaScript", "REST", "MongoDB", "Mapbox", "Stripe"],
+    "showcase": "demo"
+  },
+  {
+    "name": "Stylish",
+    "description": "A cloud-enabled fashion e-commerce web app",
+    "image": "stylish.jpg",
+    "skills": ["React", "JavaScript", "HTML", "CSS", "Firebase", "Git"],
+    "showcase": "demo"
+  },
+  {
+    "name": "The Chase",
+    "description": "A 2D arcade-style survival game.",
+    "image": "the-chase.jpg",
+    "skills": ["Java", "JUnit", "Maven", "Agile"],
+    "showcase": "code"
+  }
+]

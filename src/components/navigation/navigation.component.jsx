@@ -4,7 +4,7 @@ import { ReactComponent as DarkModeIcon } from "./../../assets/dark_mode_icon.sv
 
 
 const Navigation = () => {
-    const navigationMenus = ["Home", "About", "Skills", "Contact"]
+    const navigationMenus = ["Home", "About", "Project", "Skills", "Contact"]
     return (
         <Fragment>
             <NavigationContainer>

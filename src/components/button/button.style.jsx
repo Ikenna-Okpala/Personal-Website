@@ -8,6 +8,7 @@ import { DOMINANT_COLOR } from "../../values/colors"
  * !important overides all previous stylish rules
  * animation-diuration: determines animation time
  * tansition: determine animation speed
+ * width:fit-content - auto size parent to fit child
  */
 
 
@@ -25,12 +26,15 @@ export const BaseButton = styled.button`
     border:none;
     border-radius:30px;
     margin-top: 30px;
-    width:200px;
+    width:fit-content;
     display:flex;
     transition: 0.5s;
+    padding-left:30px;
+    padding-right:30px;
 
     svg{
         fill: white;
+        margin-left:20px;
     }
     :hover{
         transform: scale(1.1)

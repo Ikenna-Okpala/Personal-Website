@@ -1,9 +1,9 @@
 import { BaseButton } from "./button.style"
 
 
-const Button = ({ text, Icon }) => {
+const Button = ({ text, Icon, onButtonClick }) => {
     return (
-        <BaseButton>
+        <BaseButton onClick={onButtonClick}>
             {text}
             <Icon />
         </BaseButton>
