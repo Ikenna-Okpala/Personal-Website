@@ -1,23 +1,26 @@
 [
   {
     "name": "Tour Quest",
-    "description": "A server-side rendered tour booking system leveraging 40 REST APIs to making tour searching and booking seamless.",
+    "description": "A server-side rendered tour booking system leveraging 40 REST APIs, making it easy to search and reserve tours.",
     "image": "tour-quest.jpg",
     "skills": ["Node.js", "JavaScript", "REST", "MongoDB", "Mapbox", "Stripe"],
-    "showcase": "demo"
+    "showcase": "code",
+    "link": "https://github.com/Ikenna-Okpala/Tour-Quest"
   },
   {
     "name": "Stylish",
-    "description": "A cloud-enabled fashion e-commerce web app",
+    "description": "A cloud-enabled fashion e-commerce web app with checkout and payment features.",
     "image": "stylish.jpg",
     "skills": ["React", "JavaScript", "HTML", "CSS", "Firebase", "Git"],
-    "showcase": "demo"
+    "showcase": "demo",
+    "link": "https://dulcet-axolotl-c5c1c5.netlify.app/"
   },
   {
     "name": "The Chase",
-    "description": "A 2D arcade-style survival game.",
+    "description": "A 2D arcade-style survival game built with the most in demand design patterns.",
     "image": "the-chase.jpg",
     "skills": ["Java", "JUnit", "Maven", "Agile"],
-    "showcase": "code"
+    "showcase": "code",
+    "link": "https://github.com/Ikenna-Okpala/Software-Engineering-Project"
   }
 ]

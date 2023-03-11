@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
+import { ThemeContext } from "../../context/themeContext";
 
 import {
   Metric,
@@ -10,16 +11,18 @@ import {
 } from "./tech.skills.line.style";
 
 const TechSkillsLine = ({ tech, metric }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <TechSkillsLineContainer>
       <TechSkillsMetricContainer>
-        <SkillName>{tech}</SkillName>
+        <SkillName theme={theme}>{tech}</SkillName>
 
         <Metric>{metric + "%"}</Metric>
       </TechSkillsMetricContainer>
 
       <TotalLine>
-        <PercentageLine style={{ width: metric + "%" }} />
+        <PercentageLine theme={theme} style={{ width: metric + "%" }} />
       </TotalLine>
     </TechSkillsLineContainer>
   );

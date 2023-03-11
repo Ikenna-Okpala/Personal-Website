@@ -1,5 +1,5 @@
-
 import styled from "styled-components";
+import { flipBrightness } from "../../utils/themeUtils";
 import { DOMINANT_COLOR } from "../../values/colors";
 
 /**
@@ -9,23 +9,20 @@ import { DOMINANT_COLOR } from "../../values/colors";
  */
 
 export const ProfileImage = styled.img`
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius: 100px;
-    
-`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+`;
 
 export const ProfileImageContainer = styled.div`
-    display:flex;
-    background-color:${DOMINANT_COLOR};
-    border-radius: 100px;
-    margin-top: 70px;
-    justify-content:center;
-    align-items:flex-end;
-    width:400px;
-    height:400px;
-    margin-right: 150px;
+  width: 400px;
+  height: 400px;
 
-`
+  display: flex;
+  margin-right: 100px;
 
+  svg {
+    transition: 0.4s;
+  }
+`;

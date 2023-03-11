@@ -1,39 +1,44 @@
+import React, { useContext, useImperativeHandle } from "react";
 import Button from "../button/button.component";
-import { GreetingText, IntroContainer, IntroTextContainer, JobTitleContainer, NameText, StudentTitle } from "./intro.styles";
+import HeaderTitle from "../title/title.component";
+import {
+  GreetingText,
+  IntroContainer,
+  IntroTextContainer,
+  JobTitleContainer,
+  StudentTitle,
+} from "./intro.styles";
 import ProfileImageFrame from "./profileImageFrame.component";
-import { ReactComponent as ScrollDownIcon } from "./../../assets/scroll_down.svg"
+import { ThemeContext } from "../../context/themeContext";
 
+const Intro = React.forwardRef(({ aboutRef }, ref) => {
+  const { theme } = useContext(ThemeContext);
 
-const Intro = () => {
-    return (
-        <IntroContainer>
-            <IntroTextContainer>
-                <GreetingText>
-                    HELLO
-                </GreetingText>
+  const onButtonClick = () => {
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
-                <NameText>
-                    I'm Ikenna
+  return (
+    <IntroContainer ref={ref}>
+      <IntroTextContainer theme={theme}>
+        <GreetingText>Hello, I am</GreetingText>
 
-                </NameText>
+        <HeaderTitle text="Ikenna Okpala" />
 
-                <JobTitleContainer>
-                    <StudentTitle>
-                        Student &
-                    </StudentTitle>
+        <JobTitleContainer>
+          <StudentTitle theme={theme}>Software Developer</StudentTitle>
+          <span>
+            There's no greater joy than building back-end systems. I have
+            experience building API systems
+          </span>
+        </JobTitleContainer>
 
-                    <StudentTitle>
-                        Software Developer
-                    </StudentTitle>
-                </JobTitleContainer>
-                <Button text="KNOW MORE" Icon={ScrollDownIcon} />
+        <Button text="KNOW MORE" onButtonClick={onButtonClick} />
+      </IntroTextContainer>
 
-            </IntroTextContainer>
-
-            <ProfileImageFrame />
-
-        </IntroContainer>
-    )
-}
+      <ProfileImageFrame />
+    </IntroContainer>
+  );
+});
 
 export default Intro;

@@ -1,14 +1,14 @@
-import { BaseButton } from "./button.style"
+import { useContext } from "react";
+import { ThemeContext } from "../../context/themeContext";
+import { BaseButton } from "./button.style";
 
+const Button = ({ text, onButtonClick, ...otherProps }) => {
+  const { theme } = useContext(ThemeContext);
+  return (
+    <BaseButton theme={theme} onClick={onButtonClick} {...otherProps}>
+      {text}
+    </BaseButton>
+  );
+};
 
-const Button = ({ text, Icon, onButtonClick }) => {
-    return (
-        <BaseButton onClick={onButtonClick}>
-            {text}
-            <Icon />
-        </BaseButton>
-    )
-
-}
-
-export default Button
+export default Button;

@@ -3,11 +3,15 @@
  */
 
 import styled from "styled-components";
+import { flipColor } from "../../utils/themeUtils";
 import {
   DOMINANT_COLOR,
   DOMINANT_COLOR_LIGHTER,
+  HEADER_COLOR,
+  LINE_COLOR_TOTAL,
   TEXT_COLOR,
 } from "../../values/colors";
+import { transitionStyle } from "../navigation/navigation.styles";
 
 export const TechSkillsLineContainer = styled.div`
   width: fit-content;
@@ -31,21 +35,24 @@ export const TechSkillsMetricContainer = styled.div`
 export const TotalLine = styled.div`
   width: 400px;
   height: 8px;
-  background-color: ${DOMINANT_COLOR_LIGHTER};
+  background-color: ${LINE_COLOR_TOTAL};
   position: relative;
   border-radius: 10px;
 `;
 
 export const PercentageLine = styled.div`
   height: 8px;
-  background-color: ${DOMINANT_COLOR};
+  background-color: ${({ theme }) =>
+    flipColor(theme, DOMINANT_COLOR, DOMINANT_COLOR_LIGHTER)};
   left: 0;
   border-radius: 3px;
+  ${transitionStyle}
 `;
 
 export const SkillName = styled.h3`
-  color: black !important;
+  color: ${({ theme }) => flipColor(theme, HEADER_COLOR, "white")} !important;
   font-weight: 500 !important;
+  ${transitionStyle}
 `;
 
 export const Metric = styled.h3`

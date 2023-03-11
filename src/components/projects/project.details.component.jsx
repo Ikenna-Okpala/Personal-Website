@@ -1,45 +1,46 @@
-import { ProjectButton, ProjectDescriptionText, ProjectDetailsContainer, ProjectDetailsTextContainer, ProjectSkillsBubble, ProjectSkillsContainer } from "./project.details.style"
-import Button from "../button/button.component"
-import { ReactComponent as ArrowForward } from "../../assets/arrow-forward.svg"
+import { useContext } from "react";
+import { ThemeContext } from "../../context/themeContext";
+import {
+  ProjectButton,
+  ProjectDescriptionText,
+  ProjectDetailsContainer,
+  ProjectDetailsTextContainer,
+  ProjectSkillsBubble,
+  ProjectSkillsContainer,
+} from "./project.details.style";
 
+const ProjectDetail = ({
+  name,
+  description,
+  imageURL,
+  skills,
+  showcase,
+  link,
+}) => {
+  const { theme } = useContext(ThemeContext);
+  /**
+   * target prop in <a></a> is set to blank for a new tab pop up
+   */
+  return (
+    <ProjectDetailsContainer>
+      <img src={imageURL} />
 
-const ProjectDetail = ({ name, description, imageURL, skills, showcase }) => {
+      <ProjectDetailsTextContainer theme={theme}>
+        <h2>{name}</h2>
 
-    return (
-        <ProjectDetailsContainer>
-            <img src={imageURL} />
+        <ProjectSkillsContainer>
+          {skills.map((skill) => (
+            <ProjectSkillsBubble theme={theme}>{skill}</ProjectSkillsBubble>
+          ))}
+        </ProjectSkillsContainer>
 
-            <ProjectDetailsTextContainer>
-                <h2>
-                    {name}
-                </h2>
+        <ProjectDescriptionText>{description}</ProjectDescriptionText>
+        <a href={link} target="_blank">
+          <ProjectButton theme={theme}>{showcase}</ProjectButton>
+        </a>
+      </ProjectDetailsTextContainer>
+    </ProjectDetailsContainer>
+  );
+};
 
-                <ProjectSkillsContainer>
-                    {
-                        skills.map(skill =>
-                            <ProjectSkillsBubble>
-                                {skill}
-
-                            </ProjectSkillsBubble>
-                        )
-                    }
-
-
-
-                </ProjectSkillsContainer>
-
-                <ProjectDescriptionText>
-                    {description}
-                </ProjectDescriptionText>
-
-                <ProjectButton>
-                    {showcase}
-                    <ArrowForward />
-                </ProjectButton>
-            </ProjectDetailsTextContainer>
-        </ProjectDetailsContainer>
-    )
-
-}
-
-export default ProjectDetail
+export default ProjectDetail;

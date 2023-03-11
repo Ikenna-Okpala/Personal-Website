@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { DOMINANT_COLOR } from "../../values/colors";
+import { flipColor } from "../../utils/themeUtils";
+import {
+  DOMINANT_COLOR,
+  DOMINANT_COLOR_LIGHTER,
+  HEADER_COLOR,
+  SUBTITLE_COLOR,
+} from "../../values/colors";
+import { transitionStyle } from "../navigation/navigation.styles";
 
 /**
  * overflow:hidden child dimension cannot surpass parent dimension
@@ -7,7 +14,7 @@ import { DOMINANT_COLOR } from "../../values/colors";
  * trnasition-duration -> time of animation
  */
 import { ReactComponent as DropDownIcon } from "./../../assets/dropdown.svg";
-import { INITIAL, REVERSE, ROTATE } from "./tech.skills.component";
+import { INITIAL, REVERSE, ROTATE } from "./skills.component";
 
 const getRotateStyling = (rotate) => {
   switch (rotate) {
@@ -33,13 +40,16 @@ const getRotateStyling = (rotate) => {
 
 export const SkillTypeContainer = styled.div`
   width: 100%;
-  height: 100px;
+  height: auto;
 
   display: flex;
   align-items: center;
 
   svg {
-    fill: ${DOMINANT_COLOR};
+    fill: ${({ theme }) =>
+      flipColor(theme, DOMINANT_COLOR, DOMINANT_COLOR_LIGHTER)};
+    ${transitionStyle}
+    margin-top: 15px;
   }
   :hover {
     cursor: pointer;
@@ -54,17 +64,26 @@ export const SkillTypeContainer = styled.div`
 
 export const SkillTypeInfoContainer = styled.div`
   width: fit-content;
-  height: 100%;
+  height: auto;
 
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   margin-right: 100px;
+
+  h3 {
+    margin-top: -8px;
+  }
+
+  h2 {
+    color: ${({ theme }) => flipColor(theme, HEADER_COLOR, "white")} !important;
+    ${transitionStyle}
+  }
 `;
 
 export const TechSkillsColumn = styled.div`
   width: fit-content;
-  height: 0px;
+  max-height: 0px;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
@@ -74,8 +93,8 @@ export const TechSkillsColumn = styled.div`
   ${({ visible }) =>
     visible &&
     `
-    height: 400px;
+    max-height: 400px;
   `}
 
-  transition: height 0.3s ease;
+  transition: max-height 0.3s ease;
 `;
