@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2789cfc6.css",
+    "main.js": "/static/js/main.2930d2ab.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/stylish.jpg": "/static/media/stylish.a8db76e192fc69d53371.jpg",
+    "static/media/tour-quest.jpg": "/static/media/tour-quest.ccc4417cb6b4f2d8579b.jpg",
+    "static/media/the-chase.jpg": "/static/media/the-chase.b540b9496838ed092591.jpg",
+    "static/media/profileImage.png": "/static/media/profileImage.6ba90c40d645df7d7e97.png",
+    "static/media/personal-website-image-blur.png": "/static/media/personal-website-image-blur.f6c9abf2aba9cdddffd8.png",
+    "static/media/profileImageBackground.png": "/static/media/profileImageBackground.6a756425aead2cd03610.png",
+    "static/media/Ikenna_Okpala_Resume.pdf": "/static/media/Ikenna_Okpala_Resume.336534f3e6c6887cbdab.pdf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/light_mode.svg": "/static/media/light_mode.8126f4ec90ab8d361461340c7a7d92e3.svg",
+    "index.html": "/index.html",
+    "static/media/github.svg": "/static/media/github.c929f7644bec7dbde50e11573e1e4ab9.svg",
+    "static/media/frontend.svg": "/static/media/frontend.761460d97071593b6397c32ee79d6a47.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.c98c82d3010f25e30293069b4e07e723.svg",
+    "static/media/backend.svg": "/static/media/backend.e81690ce31e51e2a1cd188daa8ac71fa.svg",
+    "static/media/dark_mode_icon.svg": "/static/media/dark_mode_icon.a08acb0eb6e1aa84ec265115b1f6b2c7.svg",
+    "static/media/email.svg": "/static/media/email.62d185150dc9e980aad76a01cdbb4fd1.svg",
+    "static/media/download_icon.svg": "/static/media/download_icon.da291e5f88b9dc8142333361b828e587.svg",
+    "static/media/send.svg": "/static/media/send.5e00922e63ecbe320dd3c475ab08ba92.svg",
+    "static/media/left-arrow.svg": "/static/media/left-arrow.5305819e9529b22b50e849984e17abb2.svg",
+    "static/media/right-arrow.svg": "/static/media/right-arrow.390f18936e4fd8fa87a09fb2b826108f.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.ffead95d83f1a696d80d2ebfae7ef713.svg",
+    "main.2789cfc6.css.map": "/static/css/main.2789cfc6.css.map",
+    "main.2930d2ab.js.map": "/static/js/main.2930d2ab.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2789cfc6.css",
+    "static/js/main.2930d2ab.js"
+  ]
+}
